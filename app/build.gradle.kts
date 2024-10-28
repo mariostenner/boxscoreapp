@@ -1,6 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
+    alias(libs.plugins.plugin.hilt)
+    //id("com.google.dagger.hilt.android")
+    alias(libs.plugins.jetbrainsKotlinSerialization)
+
 }
 
 android {
@@ -48,6 +53,9 @@ android {
         }
     }
 }
+kapt {
+    correctErrorTypes = true
+}
 
 dependencies {
 
@@ -59,6 +67,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    implementation(libs.androidx.hilt.compose.navigation)
+    implementation(libs.androidx.compose.navigation)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.kotlinx.serialization.json)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
