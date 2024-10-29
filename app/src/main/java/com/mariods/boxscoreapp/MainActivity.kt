@@ -19,6 +19,8 @@ class MainActivity : ComponentActivity() {
             BoxScoreAppTheme {
                 //val mainViewModel: MainViewModel = hiltViewModel()
                 NavigationWrapper()
+
+
                 //MainScreen()
             }
         }
