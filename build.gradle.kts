@@ -3,6 +3,4 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.plugin.hilt) apply false
-    alias(libs.plugins.googleServices) apply false
-    alias(libs.plugins.crashlytics) apply false
 }
