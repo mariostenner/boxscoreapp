@@ -3,8 +3,10 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     kotlin("kapt")
     alias(libs.plugins.plugin.hilt)
-    //id("com.google.dagger.hilt.android")
     alias(libs.plugins.jetbrainsKotlinSerialization)
+    alias(libs.plugins.googleServices)
+    alias(libs.plugins.crashlytics)
+
 
 }
 
@@ -73,6 +75,13 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.kotlinx.serialization.json)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+
+    implementation(libs.coil)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
