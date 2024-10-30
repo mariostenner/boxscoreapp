@@ -73,6 +73,7 @@ dependencies {
     implementation(libs.androidx.hilt.compose.navigation)
     implementation(libs.androidx.compose.navigation)
     implementation(libs.hilt.android)
+    implementation(libs.androidx.runtime.livedata)
     kapt(libs.hilt.compiler)
     implementation(libs.kotlinx.serialization.json)
 

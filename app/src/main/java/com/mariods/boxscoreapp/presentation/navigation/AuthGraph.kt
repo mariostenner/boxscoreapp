@@ -9,4 +9,7 @@ object Splash
 object Login
 
 @Serializable
+object Signup
+
+@Serializable
 object Main
